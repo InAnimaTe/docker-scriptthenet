@@ -13,8 +13,6 @@ FROM yoshz/ghost
 RUN mkdir -p /ghost/content/themes
 ADD readium /ghost/content/themes/readium
 
-# Setup a dir for our images
-RUN mkdir -p /ghost/content/images
 # Here we symlink to /data, where we'll obtain shared storage from our sync container
 RUN ln -s /data /ghost/content/images
 
