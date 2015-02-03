@@ -15,8 +15,9 @@ ADD readium /ghost/content/themes/readium
 
 # Here we symlink to /data, where we'll obtain shared storage from our sync container
 ## Remove the existing directory
-RUN rm -rf /ghost/content/images
-RUN ln -s /data /ghost/content/images
+#RUN rm -rf /ghost/content/images
+#RUN ln -s /data /ghost/content/images
+VOLUME ["/ghost/content/images"]
 
 # Here, we store our nginx confs
 RUN mkdir -p /etc/nginx/conf.d
