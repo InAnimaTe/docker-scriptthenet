@@ -17,7 +17,10 @@ ADD readium /ghost/content/themes/readium
 ## Remove the existing directory
 #RUN rm -rf /ghost/content/images
 #RUN ln -s /data /ghost/content/images
-VOLUME ["/ghost/content/images"]
+#VOLUME ["/ghost/content/images"]
+
+## For btsync (which needs the `content/images` dir, and nginx which needs all our static assets (because the hell with serving those via node;P)
+VOLUME ["/ghost"]
 
 # Here, we store our nginx confs
 RUN mkdir -p /etc/nginx/conf.d
