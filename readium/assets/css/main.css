@@ -452,7 +452,7 @@ body {
     color: white;
     border-color: #333333;
     font-family: Inconsolata, monospace, sans-serif;
-    border-radius: 8px;
+    border-radius: 4px; /* orig: 8px */
     padding: 1px 4px 3px; /* orig: 2,4,4 */
     position: relative;
     top: -2px; /* orig: -3px */
