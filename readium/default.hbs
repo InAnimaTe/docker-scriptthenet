@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="{{asset "js/styles/obsidian.min.css"}}">
     <!-- <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i"> -->
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Sans+Pro:200,400,400i,500,600/Open+Sans:400,400i,700,700i">
-    <link href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="{{asset "js/font-awesome.min.css"}}" rel="stylesheet">
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/main.css"}}" />
     {{! No longer need print.css...defining it below since its so small }}
@@ -61,9 +62,10 @@
     }
     </style>
     <!-- Setup our jquery and fallback to local if necessary. Note I've already tried putting this async and loading later..not gonna happen because firefox :( -->
-    <script src="//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{asset "js/jquery.min.js"}}">\x3C/script>')</script>
-
+    <!-- As much as I'd love to use ya, sorry jsdelivr, not going to bother for one or two assets -->
+    <!-- <script src="//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="{{asset "js/jquery.min.js"}}">\x3C/script>')</script> -->
+    <script src="{{asset "js/jquery.min.js"}}"></script>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
