@@ -62,7 +62,7 @@
     </style>
     <!-- Setup our jquery and fallback to local if necessary. Note I've already tried putting this async and loading later..not gonna happen because firefox :( -->
     <script src="//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{asset "js/jquery.min.js"}}">\x3C/script>')</script>
+    <!-- Dont think this is exactly necessary. <script>window.jQuery || document.write('<script src="{{asset "js/jquery.min.js"}}">\x3C/script>')</script> -->
     <!-- <script src="{{asset "js/jquery.min.js"}}"></script> -->
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
